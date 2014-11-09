@@ -188,6 +188,33 @@ Route::set('comments', 'comment(/<action>(/<ct_id>(/<id>(/<page>))))', array('ct
 		'page'			=> '1'
 	));
 
+Route::set('loginform', '<lang>/<controller>/<action>',
+		array(
+			'controller' => 'loginform',
+			'action'	=> 'login',
+			//'la_id' => '\d+'
+			'lang' => '[a-z]{2}'
+	))
+	->defaults(array(
+		'controller' => 'loginform',
+		'action'     => 'index',
+		'lang'		=> 'en'
+	));
+
+Route::set('dashboard', '<lang>/<controller>(/<index>)',
+	array(
+		'controller' => 'dashboard',
+		'action'	=> 'index',
+		//'la_id' => '\d+'
+		'lang' => '[a-z]{2}'
+	))
+	->defaults(array(
+		'controller' => 'dashboard',
+		'action'	=> 'index',
+		//'la_id'	=>	null
+		'lang' => 'en'
+	));	
+
 Route::set('default', '(<controller>(/<action>(/<page>)))')
 	->defaults(array(
 		'controller' => 'mainpage',
