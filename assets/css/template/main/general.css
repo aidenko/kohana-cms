@@ -1,0 +1,140 @@
+ol 
+{
+	list-style: decimal;
+}
+
+.wrapper
+{
+	width: 970px;
+	margin: 0 auto;
+}
+
+p
+{
+	margin: 10px 0;
+}
+
+.header .logo
+{
+	float: left;	
+}
+
+.header .right
+{
+	float: right
+}
+
+.center,
+.left-column,
+.right-column
+{
+	float:left;
+	vertical-align: top;
+}
+
+.center
+{
+	width:730px
+}
+
+.left-column
+{
+	width:0;
+}
+
+.right-column
+{
+	width:240px;
+}
+
+.footer
+{
+	font-size: 12px;
+	padding: 5px 20px;
+	text-align: center;
+}
+
+.module
+{
+	margin: 5px;
+}
+
+input[type="submit"]
+{
+	border:  solid 1px lightgray;
+	background: linear-gradient(to bottom, #ffffff, #dee2e9);
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px; 
+}
+
+input[type="submit"]:hover
+{
+	cursor: pointer;
+}
+
+input[type="submit"]:active
+{
+	background: linear-gradient(to top, #ffffff, #dee2e9);
+	/*margin: 1px 0 0 1px;*/
+}
+
+.table-form
+{
+	width:100%;
+}
+
+.table-form td
+{
+	padding: 5px;
+	vertical-align: top;	
+}
+
+.table-form .left
+{
+	
+	width: 20%;
+}
+
+.table-form .right
+{
+	width: 80%;
+}
+
+@media screen and (max-device-width:768px)
+{
+	p
+	{
+		margin: 5px 3px;
+	}
+	
+	.wrapper
+	{
+		width: 95%;
+		padding: 5px;
+	}
+	
+	.center,
+	.left-column,
+	.right-column
+	{
+		float:none;
+		vertical-align: top;
+	}
+	
+	.center
+	{
+		width:100%
+	}
+	
+	.left-column
+	{
+		width:0;
+	}
+	
+	.right-column
+	{
+		width:100%;
+	}
+}

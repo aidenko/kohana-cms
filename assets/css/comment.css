@@ -1,0 +1,216 @@
+.comments
+{
+	
+}
+
+.comments .comment
+{
+	/*background-color: #f2f0f7;*/
+	border:  solid 1px lightgray;
+	font-family: serif, verdana, tahoma;
+	line-height: 1.5;
+	margin: 10px 0;
+}
+
+.comments .comment .header
+{
+	background-color: #dee2e9;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.comments .comment .header .name,
+.comments .comment .header .title
+{
+	float: left;
+}
+
+.comments .comment .header .name
+{
+	font-weight: bold;	
+}
+
+.comments .comment .header .datetime,
+.comments .comment .header .votes,
+.comments .comment .header .answer
+{
+	float: right;	
+}
+
+.comments .comment .header .answer a
+{
+	text-decoration: none;
+	color: black;
+}
+
+.comments .comment .header .votes .plus
+{
+	color:green;
+}
+
+.comments .comment .header .votes .minus
+{
+	color:red;
+}
+
+.comments .comment .text
+{
+	font-size: 14px;
+	padding: 5px;	
+}
+
+.comments .comment .text fieldset
+{
+    background-color: lightyellow;
+    border:  solid 1px lightgray;
+	padding: 5px;
+}
+
+.comments .comment .text fieldset legend
+{
+	font-weight: bold;
+    padding: 3px;
+}
+
+.comments.most-recent
+{
+	float: left;
+	font-size: 14px;
+}
+
+.comments.total
+{
+	float: right;
+}
+
+.comments .view-all
+{
+	color: #808080;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.comments .view-all:hover
+{
+	text-decoration: underline;
+}
+
+.comments.view-all-comments
+{
+	
+}
+
+.comments.item-title
+{
+	display: inline;
+	color: black;
+	text-decoration: none;
+}
+
+.comments.item-title a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.comments.back-link
+{
+	color: #808080;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.comments.back-link:hover
+{
+	text-decoration: underline;
+}
+
+.comments.back-link.right
+{
+	float: right;
+}
+
+.comments.post-comment
+{
+	font-family: serif, verdana, tahoma;
+	font-size: 14px;
+}
+
+.comments.post-comment fieldset
+{
+    border:  solid 1px lightgray;
+	padding: 10px;
+	width: 90%;
+}
+
+.comments.post-comment fieldset legend
+{
+	font-weight: bold;
+}
+
+.comments.post-comment .recaptcha,
+.comments.post-comment .user-info
+{
+	float: left;
+	padding: 10px;
+}
+
+.comments .validation-error
+{
+	color: red;
+	font-size: 12px;
+}
+
+@media screen and (max-device-width:768px)
+{
+	.comments .comment
+	{
+		margin: 15px 5px;
+	}
+	
+	.comments.post-comment fieldset legend
+	{
+		font-size: 14px;
+	}
+	
+	.comments .view-all
+	{
+		font-size: 16px;	
+	}
+	
+	.comments.most-recent,
+	.comments.total
+	{
+		float: none;
+		font-size: 12px;
+	}
+	
+	.comments.post-comment .recaptcha,
+	.comments.post-comment .user-info
+	{
+		float: none;
+	}
+	
+	.comments .validation-error
+	{
+		font-size: 12px;
+	}
+	
+	.comments .comment .header
+	{
+		font-size: 14px;
+		padding: 10px;
+	}	
+	.comments .comment .text
+	{
+		font-size: 12px;
+	}
+	
+	.comments.post-comment input
+	{
+		font-size: 14px;
+	}
+}
+
+/*@media screen and (max-device-width:768px) and (orientation: portrait){}
+@media screen and (max-device-width:768px) and (orientation: landscape){}*/

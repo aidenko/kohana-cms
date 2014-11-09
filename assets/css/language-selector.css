@@ -1,0 +1,129 @@
+.language-selector
+{
+	display:inline-block;
+	border: solid 1px lightgrey;
+	border-radius: 3px;
+	color:grey;
+	position:relative;
+	width:130px;
+}
+
+.language-selector-selected .language-item
+{
+	float:left;
+}
+
+.language-selector-selected .arrow-item
+{
+	border-left: solid 1px lightgrey;
+	float:right;
+	height:22px;
+	width:20px;
+	position:relative;
+	cursor:pointer;
+}
+
+.language-selector .arrow
+{
+	width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid lightgrey;
+  position: absolute;
+	top: 10px;
+	left: 4px;	
+}
+
+.language-selector-items
+{
+	display:none;
+	position:absolute;
+	bottom:100%;
+	border: solid 1px lightgrey;
+	border-radius: 3px 3px 0 0;
+	width:100%;
+	text-align:left;
+	margin-left: -1px;
+	cursor: pointer;
+}
+
+.language-selector-items .language-item:hover
+{
+	background-color: #f2f2f2;
+}
+
+.language-item
+{
+
+}
+
+.language-item-container
+{
+	text-decoration: none;
+	padding: 5px;
+	display:block;
+}
+
+.language-selector:hover
+{
+	border-color: grey;
+	color: black;	
+}
+
+.language-selector-selected .arrow-item:hover
+{
+	background-color: #f2f2f2;
+}
+
+.language-selector.view-list
+{
+	border-top-color: white;
+	border-radius: 0 0 3px 3px;
+} 
+
+.language-selector.view-list .arrow
+{
+	border-top: none;
+	border-bottom: 6px solid grey;
+	top:7px;
+}
+
+.language-selector.view-list .language-selector-items
+{
+	display:block;
+	
+}
+
+.language-selector:hover .language-selector-items
+{
+	border-color:grey;
+}
+
+.language-icon
+{
+	display:inline-block;
+	height: 11px;
+	width:16px;
+}
+
+.language-icon.en
+{
+	background:url(/assets/img/icons/flags/gb.png) no-repeat;
+}
+
+.language-icon.ua
+{
+	background:url(/assets/img/icons/flags/ua.png) no-repeat;
+}
+
+.language-icon.ru
+{
+	background:url(/assets/img/icons/flags/ru.png) no-repeat;
+}
+
+.language-title
+{
+	padding:2px 2px 2px 5px;
+	color: black;
+}

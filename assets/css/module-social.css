@@ -1,0 +1,11 @@
+.social
+{
+	display: block;
+}
+
+.social .button
+{
+	display: block;
+	float: left;
+	margin: 0 5px;
+}

@@ -1,0 +1,48 @@
+.article-content
+{
+	font-family: verdana,arial,tahoma;
+	font-size: 12px;
+	padding: 5px 15px;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.article-content a
+{
+	color: #c3560e;
+	text-decoration: none;
+}
+
+@media screen and (max-device-width:768px)
+{
+	.article-content
+	{
+		padding: 5px 5px;
+	}
+}
+
+@media screen and (max-device-width:768px) and (orientation: portrait)
+{
+	article h1
+	{
+		font-size: 16px;	
+	}
+	
+	.article-content
+	{
+		font-size: 10pt;
+	}
+}
+
+@media screen and (max-device-width:768px) and (orientation: landscape)
+{
+	article h1
+	{
+		font-size: 18px;	
+	}
+	
+	.article-content
+	{
+		font-size: 12pt;
+	}
+}

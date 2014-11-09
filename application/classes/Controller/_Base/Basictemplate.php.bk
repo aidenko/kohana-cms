@@ -1,0 +1,288 @@
+<?php
+/**
+ * Controller_Base_Basictemplate
+ * 
+ * @author Artem Kolombet
+ * @copyright 2013
+ * @version 1.0
+ 
+ 		History
+ 	=================================================================
+ 		Date				|	Author					| [Version]		| comment
+ 	=================================================================
+ 		2013-12-22		Artem Kolombet		[1.0]					created
+ */
+class Controller_Base_Basictemplate extends Controller
+{
+	public $template = '';
+	//public $template_file = 'index';
+	protected $lang = 'en';
+	
+	public $iLaId = null;
+	public $sLaCode = null;
+	
+	public $aStyles = array();
+	public $aScripts = array();
+	public $aMetaData = array();
+	
+	public $path = null;
+	public $oTemplate = null;
+	
+	
+	public function before()
+	{		
+		//$this->profiler_token = Profiler::start('test', 'profiler');
+		/*$options = Kohana::$config->load('path');
+		
+		var_dump($options);*/
+		
+		$this->path = (object) Kohana::$config->load('path');
+		
+		/*if($this->getTemplateFile() != '')
+		{*/
+			$this->oTemplate = new Model_System_Template;
+		
+			//$this->template = $this->oTemplate->getTemplateIndex();
+			$this->oTemplate->setTemplateFile($this->getTemplateFile());
+			$this->template = $this->oTemplate->getTemplateFilePath();
+			
+			//parent::before();
+			
+			$this->sLaCode = $this->request->param('lang');
+			
+			$oLanguage = new Model_Language;
+			
+			$this->iLaId = $oLanguage->getLanguageId();
+			
+			if($this->sLaCode == '' or is_null($this->sLaCode))
+				$this->sLaCode = $oLanguage->getLanguageCode($this->iLaId);
+			
+			$this->setLang($this->sLaCode);
+			
+			I18n::lang($this->sLaCode.'/'.$this->request->controller());
+			
+			$this->addStyle($this->path->css.'reset.css');
+			$this->addStyle($this->path->css.'template/'.$this->getTemplateName().'/general.css', 1);
+			$this->addStyle($this->path->css.'template/'.$this->getTemplateName().'/advertisement.css', 2);
+			//$this->addStyle($this->path->jquery.'themes/base/minified/jquery-ui.min.css', 2);
+			
+			//$this->addScript($this->path->jquery.'jquery-2.0.3.min.js');
+			//$this->addScript($this->path->js.'config.js', 1);
+			//$this->addScript($this->path->js.'common.js', 2);	
+		/*}else
+			parent::before();	*/
+		
+		$this->setTitle('');
+		$this->setBody('');
+	}
+	
+	public function action_index()
+	{
+		
+	}
+	
+	public function getView($sRelPath/*, $sTemplateName = null*/)
+	{
+		/*if(is_null($sTemplateName) or empty($sTemplateName))
+			$sTemplateName = $this->getTemplateName();*/
+		
+		return $this->oTemplate->getTemplatePath().$sRelPath;
+	}
+	
+	public function getTemplateName()
+	{
+		return $this->oTemplate->getTemplateName();
+	}
+	
+	public function setTemplateFile($sName = 'index')
+	{
+		return $this->setTemplate($sName);
+		//$this->template_file = $sName;
+	}
+	
+	public function setTemplate($sName = '')
+	{
+		$this->template =  $sName;
+	}
+	
+	public function getTemplateFile()
+	{
+		return $this->template;
+		//return $this->template_file;
+	}
+	
+	public function getTemplateFilePath()
+	{
+		return  $this->oTemplate->getTemplatePath().$this->template;
+		//return  $this->oTemplate->getTemplatePath().$this->template_file;
+	}
+	
+	public function setLang($sLang)
+	{
+		$this->lang = $sLang;
+		//$this->template->lang = $sLang;
+	}
+	
+	public function addStyle($sPath, $iOrder = 0)
+	{
+		if(!in_array($sPath, Arr::pluck($this->aStyles, 'path')))		
+			$this->aStyles[] = array('path' => $sPath, 'order' => $iOrder);
+	}
+	
+	public function addScript($sPath, $iOrder = 0)
+	{
+		if(!in_array($sPath, Arr::pluck($this->aScripts, 'path')))		
+			$this->aScripts[] = array('path' => $sPath, 'order' => $iOrder);
+	}
+	
+	public function addMetaData($sName, $sContent)
+	{
+		$this->aMetaData[$sName] = $sContent;
+	}
+	
+	public function setMetaKeywords($sContent = '')
+	{
+		return $this->addMetaData('keywords', $sContent);
+	}
+	
+	public function setMetaDescription($sContent = '')
+	{
+		return $this->addMetaData('description', $sContent);
+	}
+	
+	public function setTitle($sTitle)
+	{
+		$this->template->title = $sTitle;
+	}
+	
+	public function setBody($sBody)
+	{
+		$this->template->body = $sBody;
+	}
+	
+	public function after()
+	{
+		$this->template->aHead = array(
+			'title' => $this->getTitle(),
+			'style' => $this->getStyles(),
+			'script' => $this->getScripts(),
+			'meta' => $this->getMetaData()
+		);
+		
+		
+		//$this->compressCss();
+		
+		parent::after();
+
+		$this->renderSockets();
+		
+		//Profiler::stop($this->profiler_token);
+		
+		//echo View::factory('profiler/stats'); 
+	}
+	/*
+	private function compressCss()
+	{
+		$sCss = '234234242';
+		
+		foreach($this->aStyles as $path)
+		{
+			
+		}
+		
+		Cache::instance()->set('css', $sCss, 30);
+		
+		//$data = Cache::instance('file')->get('foo');
+	}*/
+	
+	private function getTitle()
+	{
+		return $this->template->title;
+	}
+	
+	private function getStyles($bSort = true)
+	{
+		$aStyles = $this->aStyles;
+		
+		if($bSort)
+			usort($aStyles, array('Controller_Base_Basictemplate', 'sortByOrder'));
+		
+		return $aStyles;	
+	}
+	
+	private function getScripts($bSort = true)
+	{
+		$aScripts = $this->aScripts;
+		
+		if($bSort)
+			usort($aScripts, array('Controller_Base_Basictemplate', 'sortByOrder'));
+		
+		return $aScripts;	
+	}
+	
+	public function sortByOrder($a, $b)
+	{
+		return intval($a['order'] > $b['order']);	
+	}
+	
+	public function getMetaData()
+	{
+		return $this->aMetaData;
+	}
+	
+	
+	public function getControllerView()
+	{
+		return strtolower($this->request->controller());
+	}
+	
+	public function renderControllerView($sView= null, $aData = array())
+	{
+		$sViewName = (!is_null($sView) && !empty($sView)) ? $sView : $this->getControllerView();
+		
+		$oView = View::factory($sViewName);
+		
+		if(is_object($oView))
+		{
+			if(is_array($aData))
+				foreach($aData as $p => $v)
+					$oView->set($p, $v);
+					
+			return $oView;		
+		}
+		else
+			return null;
+	}
+	
+	private function renderSockets()
+	{
+		$sBody = $this->response->body();
+
+		$aReplacement = array();
+
+		foreach($this->oTemplate->getSockets() as $oSocket)
+			$aReplacement[$oSocket->node] = Request::factory($oSocket->controller.'/'.$oSocket->method.$this->getSocketParam($oSocket->param))->execute();
+		
+		$this->response->body(str_replace(array_keys($aReplacement), array_values($aReplacement), $sBody));
+	}
+	
+	private function getSocketParam($sParam = '')
+	{
+		$aResult = array();
+		
+		if(preg_match_all('/\{([\w\d]+)\}/', $sParam, $aResult))
+		{
+			$aResult = $aResult[1];
+			foreach($aResult as $k => &$p)
+				$aResult[$k] = $this->request->param($p);
+			
+			unset($p);
+			
+			//return '/'.implode('/', $aResult);
+			return preg_replace(array('/\{([\w\d]+)\}/'), $aResult, $sParam);		
+		}
+		
+		return '';
+	}
+}
+	

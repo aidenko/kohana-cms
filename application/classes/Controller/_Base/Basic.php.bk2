@@ -1,0 +1,86 @@
+<?php
+/**
+ * Controller_Base_Basic
+ * 
+ * @author Artem Kolombet
+ * @copyright 2013
+ * @version 1.0
+ 
+ 		History
+ 	=================================================================
+ 		Date				|	Author					| [Version]		| comment
+ 	=================================================================
+ 		2013-12-22		Artem Kolombet		[1.0]					created
+ */
+class Controller_Base_Basic extends Controller_Base_Basictemplate
+{
+	public $iLaId = null;
+	public $sLaCode = null;
+	
+	public $path = null;
+	
+	protected $lang = 'en';
+	
+	public function before()
+	{
+		parent::before();
+		
+		$this->path = (object) Kohana::$config->load('path');
+		
+		$this->sLaCode = $this->request->param('lang');
+		
+		$oLanguage = new Model_Language;
+		
+		$this->iLaId = $oLanguage->getLanguageId(false);
+		
+		if($this->sLaCode == '' or is_null($this->sLaCode))
+			$this->sLaCode = $oLanguage->getLanguageCode($this->iLaId);
+		
+		$this->setLang($this->sLaCode);
+		
+		I18n::lang($this->sLaCode.'/'.$this->request->controller());
+		
+		$this->setBody('');
+	}
+	
+	/*
+	public function action_index()
+	{
+		
+	}
+	*/
+	
+	public function setBody($sBody)
+	{
+		$this->response->body($sBody);
+	}
+	
+	public function setLang($sLang)
+	{
+		$this->lang = $sLang;
+	}
+	
+	public function getControllerView()
+	{
+		return strtolower($this->request->controller());
+	}
+	
+	public function renderControllerView($sView= null, $aData = array())
+	{
+		$sViewName = (!is_null($sView) && !empty($sView)) ? $sView : $this->getControllerView();
+		
+		$oView = View::factory($sViewName);
+		
+		if(is_object($oView))
+		{
+			if(is_array($aData))
+				foreach($aData as $p => $v)
+					$oView->set($p, $v);
+					
+			return $oView;		
+		}
+		else
+			return null;
+	}
+}
+	

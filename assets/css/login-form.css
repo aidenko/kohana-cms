@@ -1,0 +1,23 @@
+.login-table
+{
+	height: 100%;	
+	width: 100%;
+}
+
+.login-block
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.login-form-container
+{
+	border: solid grey 1px;
+	padding:40px;
+	border-radius:10px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */	
+	
+	display:inline-block;
+}

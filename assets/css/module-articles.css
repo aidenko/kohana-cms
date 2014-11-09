@@ -1,0 +1,51 @@
+.module-articles
+{
+	border: solid 1px #dee2e9;
+}
+
+.module-articles .title
+{
+	background-color: #dee2e9;
+	color: black;
+	padding: 5px;
+}
+
+.module-articles .article
+{
+
+}
+
+.module-articles .article:hover a
+{
+	background-color: rgb(96, 98, 109);
+}
+
+.module-articles .article a
+{
+	color: black;
+	display: block;
+	font-family: verdana, serif, tahoma;
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.module-articles .article:hover a
+{
+	color: white;
+}
+
+@media screen and (max-device-width:768px)
+{
+	.module-articles .title
+	{
+		font-size: 30pt;
+		padding: 20px;
+	}
+	
+	.module-articles .article a
+	{
+		font-size: 34pt;
+	}
+}

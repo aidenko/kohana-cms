@@ -1,0 +1,52 @@
+.advertisenemt
+{
+	
+}
+
+.advertisenemt.adv-1
+{
+	
+}
+
+.advertisenemt.adv-2
+{
+	text-align:center;
+}
+
+.advertisenemt.adv-3
+{
+	background-color: rgb(96, 98, 109);
+	padding:10px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: white;
+}
+
+.advertisenemt.adv-4
+{
+	
+}
+
+.advertisenemt.adv-5 .mobile
+{
+	display: none;
+}
+
+
+@media screen and (max-device-width:768px)
+{
+	.advertisenemt.adv-5 .desktop
+	{
+		display:none;
+	}
+	
+	.advertisenemt.adv-5 .mobile
+	{
+		display: block !important;
+	}
+	
+	.advertisenemt.adv-2
+	{
+		display: none;
+	}
+}

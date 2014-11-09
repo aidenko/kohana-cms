@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--#include file="/ssi/head.html" -->
+	
+</head>
+<body>
+
+<table>
+	<tbody>
+		<tr>
+			<td class="col-sm-8">
+				<div>
+				<h1>Community Builder 1.2.1 - добавить поле выбора страны и города</h1>
+				<input type="button" class="btn btn-ttc" value="Button" />
+				<p>Чтобы расширить стандартную форму регистрации Joomla 1.5 с помощью компонента <a title="Community Builder 1.2.1" href="http://www.joomlapolis.com" target="_blank">Community Builder 1.2.1</a> (СВ 1.2.1), необходимо сделать следующее (считаем, что сам СВ 1.2.1 у вас уже установлен):</p>
+<ol>
+<li><span style="line-height: 24px;">Скачать компонент, которые формирует базу стран, областей и городов <a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=33:com-towns-1-0-j-1-5-for-cb-1-2-1" target="_blank">Компонент для наполнения списка страна-область-город</a></span></li>
+<li><span style="line-height: 24px;">Установить этот компонент</span></li>
+<li><span style="line-height: 24px;">Зайти в меню <em>Компоненты </em>и выбрать<em>&nbsp;Towns. </em>Добавить страны, области и города, которые считаете необходимыми.&nbsp;Объяснять, как это делать, я не буду, там интуитивно понятный интерфейс</span></li>
+<li><span style="line-height: 24px;">Скачать плагин для СВ 1.2.1, который добавляет тип поля для выбора Страны-Области-Города <a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=34:plug-cbtownfield" target="_blank">Плагин для СВ 1.2.1 (поле страна-область-город</a></span></li>
+<li><span style="line-height: 24px;">Зайти в меню <em>Компоненты </em>и выбрать <em>Community Builder-Plugin Management. </em>Установить плагин, который скачали в пункте 4 через меню установки&nbsp;&nbsp;<em>Community Builder! </em>И не забыть <span style="color: #ff0000;"><strong>включить</strong></span> его (опубликовать)</span></li>
+<li><span style="line-height: 24px;">Идем во вкладку <em>Field Management </em>и нажимаем <em>New Field.&nbsp;</em></span></li>
+<li><span style="line-height: 24px;">В выпадающем меню <em>Type </em>выбираем самый нижний пункт <em>Towns List</em>.</span></li>
+<li><span style="line-height: 24px;">Отмечу, что здесь за справа в блоке <em>Field-specific Parameters</em>&nbsp;есть текстовое поле <em>Admin e-mail</em>. Сюда введите электронный адрес, на который будет отправляться сообщение, если пользователь не найдет при регистрации своего города или страны (в пользовательской части есть такой пункт). Таким образом, пользователи будут сами сообщать вам, что существуют города, которых нас в вашей базе. И вы сможете их добавить на будущее</span></li>
+<li><span style="line-height: 24px;">Остальное рассказывать не буду - все интуитивно понятно</span></li>
+</ol>
+<p><strong>Какие есть минусы</strong></p>
+<ul>
+<li><span style="line-height: 24px;">самому нужно наполнять базу с городами и странами. Это довольно трудоемкое занятие. Да и времени занимает ой как много</span></li>
+<li><span style="line-height: 24px;">нет возможности создания списка на разных языках, что необходимо при разработке мультиязычкого сайта</span></li>
+</ul>
+<p>Скачать все файлы по данной статье можно здесь
+<br />
+<a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html" target="_blank">Файлы для добавления поля выбора страны-области-города</a></p>
+
+				</div>
+				
+				<div>
+				<h1>Community Builder 1.2.1 Stable - Украинский (укр) и Русский (рус)</h1>
+				
+				<p>Локализация <strong>Community Builder 1.2.1 Stable</strong> стала наконец-то более "гуманной" что ли:) Достаточно просто установить соответствующий плагин с нужным вам языком. Другое дело, что этих плагинов локализаций очень мало, но с миру по нитке...</p>
+
+<p>На основе русской локализации для этой версии (<strong>1.2.1 Stable)</strong>, сделаной кем-то (пусть простит меня автор, не запомнил его имя и не сохранил ссылку на его ресурс), сделал украинскую локализацию.</p>
+<p>Как в русской, так и в украинской от себя добавил несколько полей, которые были мне необходимы для расширения формы регистрации Joomla! 1.5.</p>
+<p>Украинский вариант этих добавленых полей:</p>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">DEFINE<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_SEX'</span>, <span style="color: #ff0000;">'Стать'</span><span style="color: #66cc66;">)</span>;</span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_MALE'</span>, <span style="color: #808080; font-style: italic;">"Чоловіча");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_FEMALE'</span>, <span style="color: #808080; font-style: italic;">"Жіноча");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_ICQ'</span>, <span style="color: #808080; font-style: italic;">"ICQ");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_ABOUT_YOURSELF'</span>, <span style="color: #808080; font-style: italic;">"Трохи про собе");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_REFERRER'</span>, <span style="color: #808080; font-style: italic;">"Звідки дізнались про сайт");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_BIRTHDAY'</span>,<span style="color: #ff0000;">'Дата народження'</span><span style="color: #66cc66;">)</span>;</span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Русский вариант:</p>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">DEFINE<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_SEX'</span>, <span style="color: #ff0000;">'Пол'</span><span style="color: #66cc66;">)</span>;</span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_MALE'</span>, <span style="color: #808080; font-style: italic;">"Мужской");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_FEMALE'</span>, <span style="color: #808080; font-style: italic;">"Женский");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_ICQ'</span>, <span style="color: #808080; font-style: italic;">"ICQ");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_ABOUT_YOURSELF'</span>, <span style="color: #808080; font-style: italic;">"Немного о себе");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_REFERRER'</span>, <span style="color: #808080; font-style: italic;">"Откуда узнали о сайте");</span></span><br /><span style="vertical-align: top;">&nbsp;</span><br /><span style="vertical-align: top;">define<span style="color: #66cc66;">(</span><span style="color: #ff0000;">'_UE_BIRTHDAY'</span>,<span style="color: #ff0000;">'Дата рождения'</span><span style="color: #66cc66;">)</span>;</span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Скачать эти плагины можно здесь</p>
+<p><a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html" tabindex="_blank">Скачать языковые плагины</a></p>
+<p><a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=36:community-builder-1-2-1-stable-plugin-ukrainian-ukrainskij-ukrajinska-ukr" target="_blank">Украинский языковой плагин</a></p>
+<p><a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=35:community-builder-1-2-1-stable-plugin-russian-russkij" target="_blank">Русский языковой плагин</a></p>
+<p><span style="color: #ff0000;">Устанавливать их необходимо через МЕНЕДЖЕР ПЛАГИНОВ COMMUNITY BUILDER!!!</span></p>
+
+				</div>
+				
+				<div>
+					<h1>Community Builder 1.2.1 - удаление копирайтов</h1>
+			 	
+			 	
+			 	<p>Community Builder 1.2.1 выводит целую страницу со своими копирайтами.Как их убрать - дальше</p>
+
+<p><img style="margin: 5px;" alt="cb with copyrights" src="http://uawebs.net/images/blog/kolombet_artem/cb_with_copyrights.png" height="188" width="300" /></p>
+<p>Как смотрит мораль на удаление копирайтов бесплатных продуктов - это отдельная тема. Покажу, как их удалить. Делать это на своем сайте или нет, решает каждый для себя.</p>
+<p>Ищем файл <strong>/components/com_comprofiler/plugin/user/plug_cbmenu/cb.menu.php</strong>. Находим в нем следующие строки</p>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">// $this-&gt;menuBar-&gt;set("class", "mainlevel");		//BB: hardcoded to check &gt;RC2.
+&nbsp;
+$firstMenuName		= $params-&gt;get('firstMenuName', '_UE_MENU_CB');
+$firstSubMenuName	= $params-&gt;get('firstSubMenuName', '_UE_MENU_ABOUT_CB');
+$firstSubMenuHref	= $params-&gt;get('firstSubMenuHref', $ue_credits_url);
+$secondSubMenuName	= $params-&gt;get('secondSubMenuName', '');
+$secondSubMenuHref	= $params-&gt;get('secondSubMenuHref', '');</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>В моем оригинальном файле это строки с 987 по 993 включительно. (оригинальный фалй от разработчиков можно скачать здесь <a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=37:community-builder-1-2-1-stable-credits" target="_blank">CB 1.2.1 Stable (cd.menu.php - original)</a></p>
+<p>&nbsp;</p>
+<p>Превращаем эти строки с такой вид</p>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">// $this-&gt;menuBar-&gt;set("class", "mainlevel");		//BB: hardcoded to check &gt;RC2.
+&nbsp;
+/*$firstMenuName	= $params-&gt;get('firstMenuName', '_UE_MENU_CB');
+$firstSubMenuName	= $params-&gt;get('firstSubMenuName', '_UE_MENU_ABOUT_CB');
+$firstSubMenuHref	= $params-&gt;get('firstSubMenuHref', $ue_credits_url);*/
+$secondSubMenuName	= $params-&gt;get('secondSubMenuName', '');
+$secondSubMenuHref	= $params-&gt;get('secondSubMenuHref', '');</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Как видите, закомментрованы строки 3-5 для данного куска кода.</p>
+<p>Сохраняем и радуемся осутствию копирайтов.</p>
+<p><img style="margin: 5px;" alt="CB without credits" src="http://uawebs.net/images/blog/kolombet_artem/CB_without_credits.png" height="187" width="300" /></p>
+<p>Если кому лень комментить в коде, может скачать уже измененный файл здесь <a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=38:community-builder-1-2-1-stable-without-credits" target="_blank">СВ 1.2.1 Stable without credits</a> &nbsp;и положить его по пути <strong>/components/com_comprofiler/plugin/user/plug_cbmenu/cb.menu.php</strong></p>
+
+			 	
+				</div>
+				
+				
+				<div>
+					<h1>Мультиязычный дизайн на Joomla!</h1>
+					
+					
+					<p>Возможно, вы заметили, что на нашем сайта логотим менятеся в зависимости от выбранного языка. Так вот, я расскажу и покажу, как сделать подобное на вашем сайте.</p>
+<p>Нам понадобится Joomla! версии не ниже 1.5.15 (скорее всего, на более ранних версиях предложенная мною методика тоже будет работать, но я пробовал только начиная с 1.5.15 и до 1.5.18)</p>
+
+<p>Еще нужен JoomFish&nbsp; не ниже 2.04. Кто не знает, этот компонент очень полезен при создании мультиязычного сайта на Joomla!</p>
+<p>Итак, для начала определим текущий язык сайта. Для этого напишем всего лишь 3 строчки кода</p>
+<p>&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_abap">
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1<br />2<br />3<br />4<br />5</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">&lt;?php //what is current language<br />$currentLang =&amp; JFactory::getDocument();<br />$currentLanguage = $currentLang-&gt;language;<br />$currentLanguage = substr($currentLanguage,0,2);<br />?&gt;
+						</pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>$currentLanguage</strong> вернет нам <strong>uk</strong>,<strong> ru</strong> или <strong>en</strong> и т.п, короче говоря, последние две буквы локализации, чего вполне достаточно для идентификации языка в большинстве случаев.</p>
+<p>&nbsp;</p>
+<p>Как это использовать? А очень просто!</p>
+<p>&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_abap">
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">&lt;div&gt;<br />&lt;h1 class="<strong>logo_&lt;?=</strong>$currentLanguage<strong>?&gt;</strong>"&gt;</pre>
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">&lt;a href="index.php" title=""&gt;&lt;?php echo $tmpTools-&gt;sitename(); ?&gt;&lt;/a&gt;<br />&lt;/h1&gt;<br />&lt;/div&gt;</pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Как видите, мы просто подставили нашу переменную в название класса.</p>
+<p>А в CSS пишем примерно следующее</p>
+<p>&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_abap">
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">.logo-en<br />&nbsp;<br />{background-image:url(/images/logo_en.png);<br />&nbsp;<br />}<br />&nbsp;<br />.logo-uk<br />&nbsp;<br />{background-image:url(/images/logo_uk.png);<br />&nbsp;<br />}<br />&nbsp;<br />.logo-ru<br />&nbsp;<br />{background-image:url(/images/logo_ru.png);<br />&nbsp;<br />}
+						</pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Также можно для каждого языка загружать отдельную таблицу стилей. если есть в этом необходимость</p>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">&lt;link href="/css/<strong>template_</strong><strong>&lt;?=</strong>$currentLanguage<strong>?&gt;</strong>.css" rel="stylesheet" type="text/css" /&gt; </pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Как видите, все очень просто.</p>
+<p>Как говорил Иван Франко, который, кстати, владел 20 языками: "Скільки мов ти знаєш, стільки разів ти людина". Для русскоязычных читателей перевод: "Сколько языков ты знаешь, столько раз ты человек".</p>
+<p>Как видите, все очень просто:)</p>
+
+				</div>
+				
+				<div>
+					<h1>Как я покупал электронную книжку Amazon Kindle Wi-Fi 6'' на Amazon.com</h1>
+					
+					<p style="margin-bottom: 0cm;">Приспичило мне купить электронную книжку. Да не какую-нибудь , а такую, чтобы мне захотелось именно вот такую:)</p>
+<p style="margin-bottom: 0cm;">Короче говоря, прошерстил я много украинских интернет-магазинов, цены довольно высокие, кусаются. Ну не готов я отдать за электронную книжку 2300-2500 грн (285-310 долларов)!</p>
+
+<p style="margin-bottom: 0cm;">И вот решил проверить, сколько же стоит подобного рода товар на заграничных сайтах. Google быстро вывел меня на amazon.com. Я ужаснулся! Такая книжка, которая в Киеве стоит от 2400 до 4200 грн (только вдумайтесь в диапазон цен!) на amazon.com стоит 139 американских долларов, что в перевода не гривны по межбанковскому курсу составляет 1123грн!</p>
+<p style="margin-bottom: 0cm;">Единственное, что меня смущало, так это вопрос доставки и возможной проверки на таможне и оплат типа растаможки, госпошлины и т.п. Не силен я в этих делах, поэтому колебался. Почитал в инете, многие говорят, что проверяют посылку на таможне только в случае, если заявленная стоимость превышает 200 долларов (по некоторым данным — 200 евро).</p>
+<p style="margin-bottom: 0cm;">И вот после двух дней колебаний и раздумий я решился. Все-таки, очень хорошая цена. Согласитесь, экономия почти в два раза.</p>
+<p style="margin-bottom: 0cm;">Заказал я книжку за 139 долларов и amazon.com развел меня на чехол за 60 долларов. :) Да, просто увидел в разделе «с этим товаром покупают» симпатичный чехольчик, кожаный и даже с фонариком для чтения при плохом освещении. Знают буржуи, как заинтересовать покупателя!</p>
+<p style="margin-bottom: 0cm;">Короче говоря, весь заказ вышел на 198,99 долларов: 139 баксов книжка и 59,99 чехол (который в Киеве я нашел минимум за 714 грн — 84доллара, но при том, что на складе нет, только под заказ). Это меньше 200 баксов, так что, если верить блогам в интернете, дополнительных оплат на нашей границе быть не должно. За доставку взяли с меня 26,97, служба доставки DHL — самая обычная, которую предлагает amazon.com. Не стал я переплачивать за срочную доставку и подобное. При оформлении заказа меня честно предупредили, что заказ будет доставлен примерно 7-8 февраля, а оформлял заказ 26 января. Ну, примерно 2 недели — меня устраивает. Нажал кнопку «оформить заказ», оплатил с помощью карточки Укрсоцбанка и начал ждать.</p>
+<p style="margin-bottom: 0cm;">На электронную почту пришли письма с благодарностью и всякой ерундой. На следуюAmazon Kindle Wi-Fi 6''щий день пришло письмо, что мой заказ отправлен и что получу я его примерно 4 февраля. «Уже на 3-4 дня раньше», - обрадовался я.</p>
+<p style="margin-bottom: 0cm;">И вот 31 января в 9 утра звонок с неизвестного номера Лайф:)</p>
+<ul>
+<li>&nbsp;- Здравствуйте, это компания DHL. Вам тут бандеролька из штатов.</li>
+</ul>
+<p style="margin-bottom: 0cm;">Я был в шоке! По Украине посылка идет от 7 дней! А тут из штатов за 6 дней, включая и день заказа, когда у америкосов была ночь! То есть, реально 5 суток! Да, почти 27 долларов, но ведь оно того стоит!</p>
+<p style="margin-bottom: 0cm;">Короче говоря, сверили мы с оператором адрес доставки, и в 13:03 по киевскому времени курьер на желтеньком авто привез мне мою книжку. Минуты полторы понадобилось, чтобы он нашел мою посылку, а я расписался на бланке. И вот теперь книжка лежит и дожидается, пока я напишу эту заметку:)</p>
+<p style="margin-bottom: 0cm;">Купил я Amazon Kindle Wi-Fi 6''(без 3G). С 3G стоит 189 долларов. Всего вышло 198,99 + 26,97 = 225,96 долларов или примерно 1838 гривен. Никакого гемора!</p>
+<p style="margin-bottom: 0cm;">&nbsp;</p>
+<p style="margin-bottom: 0cm;"><strong>Добавлено 2 февраля</strong></p>
+<p style="margin-bottom: 0cm;">Два дня попользовался, решил немного поделиться впечатлениями</p>
+<p style="margin-bottom: 0cm;">Итак, русский и украинский текст отображает отлично и без каких-либо проблем с кодировкой! Так что не ведитесь на рекламные заявления отечественных продавцов Kindle, которые заявляют, что только Kindle из их магазина нормально читает русский текст. Начитался я реклам, в которых продавцы рассказывают, что да, на амазоне дешевле, но нужно растаможить товар, нужно перепрошить книжку, чтобы читать кирилицу. И поэтому у них дороже. На верьте, стандартный Kindle не имеет проблем в кирилицей. Да, меню на английском, но разве в сегодняшнем мире кого-то смутят пункты меню типа "Delete", "Search", "Go to...", "Add to bookmarks"? Так что не стоит даже заморачиваться с этим</p>
+<p style="margin-bottom: 0cm;">&nbsp;</p>
+<p style="margin-bottom: 0cm;">Далее, экран. Белый, реально бумага:) Текст очень четкий.</p>
+<p style="margin-bottom: 0cm;">&nbsp;</p>
+<p style="margin-bottom: 0cm;">Pdf читает без проблем, загружал и маленькие, и на 9 мегабайт. Открывает быстро, листает еще быстрее.</p>
+<p style="margin-bottom: 0cm;">Естественно, пдф немного неудобно читать, потому что формат А4 не может нормальным размером шрифта поместиться на экран в 6 дюймов. Но это решается очень легко. Заходите на сайт <a href="index.php?option=com_weblinks&amp;view=weblink&amp;id=12:http-calibre-ebook-com-download&amp;catid=44:kolombet-artjom" target="_blank">http://calibre-ebook.com/download</a> - и выбираете пакет для вашей системы. Для счастливых пользователей Ubuntu, коим являюсь и я, не нужно ничего скачивать. Эти пакеты в стандартном репозитории. Ищите по слову <strong>calibre</strong>.</p>
+<p style="margin-bottom: 0cm;">Так вот, после установки этой программы можно из PDF получить файл с расширением .mobi. Рассказывать, как пользоваться программой не буду, там все легко и понятно. Выбираете пдф-ку, нажимаете "конвертировать", выбираете формат исходящего файла и вперед!</p>
+<p style="margin-bottom: 0cm;">PDF размером 9 магебайт с кучей картинок конвертировался примерно полчаса на процессоре core i-5 450M (2,4GHz), использование памяти примерно 1,3Гб. Конечный файл с расширением .mobi вішел чуть больше 5 мегабайт</p>
+<p style="margin-bottom: 0cm;">А вот PDF размером 2 мегабайта, содержащий только текст и ни единой картинки, конвертировался что-то около 50 секунд.</p>
+<p style="margin-bottom: 0cm;">После конвертации заливаем через кабель файлы на книжку и читаем удобным для вас шрифтом и т.п</p>
+				</div>
+				
+				<div>
+					<h1>Virtuemart 2.0 - Я согласен с Условиями обслуживания</h1>
+					
+					<p>Многим мозолит глаза опция в корзине VirtueMart 2.0 "Я согласен с Условиями обслуживания". Ее нельзя убрать из админки, так как это поле отмечено как системное и не поддается редактированию.</p>
+
+<p>&nbsp;</p>
+<p>Решений несколько. Самое расспространенное в инете следующее</p>
+<p><em>Берете файл www\administrator\components\com_virtuemart\views\userfields\tmpl\default.php<br style="color: #444444; font-family: 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; background-color: #f7f8f9; padding: 0px; margin: 0px;" />находите 103-ю строку $coreField = (in_array($row-&gt;name, $this-&gt;lists['coreFields']));<br style="color: #444444; font-family: 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; background-color: #f7f8f9; padding: 0px; margin: 0px;" />ставите перед ней два слэша //$coreField = (in_array($row-&gt;name, $this-&gt;lists['coreFields']));<br style="color: #444444; font-family: 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; background-color: #f7f8f9; padding: 0px; margin: 0px;" />сохраняетесь, после этого идете в админку в Пользовательские поля и видите, что ваше поле "Я согласен с Условиями обслуживания" больше не заблокировано, отлючаете его и все</em></p>
+<p>Все отлично должно сработать, но не кошерно:)</p>
+<p>После 5 минут ковыряния по файловой системе Virtuemart дали такой результат</p>
+<p>1) открываем файл <strong>/administrator/components/com_virtuemart/models/userfields.php</strong><span style="background-color: #000000; color: #777777; font-family: sans-serif; line-height: 14px;"><br /></span></p>
+<p>2) находим метод <strong>getCoreFields()</strong></p>
+<p>3) комментируем <strong>, 'agreed'. </strong>Получаем метод в следующем виде</p>
+<div style="position: absolute; left: -10000px; top: 50px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">function getCoreFields(){</div>
+<div style="position: absolute; left: -10000px; top: 50px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">return array( 'name','username', 'email', 'password', 'password2' , 'agreed');</div>
+<div style="position: absolute; left: -10000px; top: 50px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">}</div>
+<p><code>{source}<span style="font-family: courier new, courier, monospace;"><br />function getCoreFields(){	 return array( 'name','username', 'email', 'password', 'password2'/* , 'agreed'*/);	}<br /></span>{/source}</code></p>
+<p>4) идем в админку VitrueMart <strong>Компоненты -&gt; VirtueMart -&gt; Настройки -&gt; Поля, заполняемые пользователем</strong> и убираем надоедливую опцию из опубликованных, из обязательных и т.п</p>
+<p>5) смотрим в Корзину... Вуаля -&nbsp;Я согласен с Условиями обслуживания отсутствует:)</p>
+<p>&nbsp;</p>
+<p>Удачных покупок!</p>
+
+				</div>
+				
+				<div>
+					<h1>Virtuemart 2.0.2 - кнопка корзины на странице категории</h1>
+				<p>Существует проблема с выводом кнопки "Купить" ("В корзину", "Добавить в корзину") в шаблоне категории Virtuemart. Просто нет такой опции.&nbsp;</p>
+<p>Итак, задача - сделать кнопку "В корзину" на странице категории, чтобы получилось примерно так</p>
+
+<p><img style="margin: 5px; float: left;" alt="virtuemart-category-cart" src="http://uawebs.net/images/blog/kolombet_artem/virtuemart-category-cart.png" height="323" width="300" />В инете много рецептов, как получить подобный результат, но как правило, все они сводятся к тому, чтобы править системные файлы Vitruemart. Это чревато тем, что в будущем вам либо придется остаться на установленной версии компонента, или же каждый раз при обновлении вносить изменения заново. Не очень радужная перспектива.</p>
+<p>Мой вариант состоит в том, чтобы создать свои собственные шаблоны и заменить ими системные.</p>
+<p>Берем два файла из архива <a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=39:virtuemart-category-view" target="_blank">Virtuemart_category_view</a>&nbsp;и кладем по пути <strong>/templates/[template_name]/html/com_virtuemart/category</strong></p>
+<p>что это за фалы?</p>
+<p><strong>default.php</strong> - шаблон категории. Я в нем убрал все, что мне не нужно (рейтинг и т.п). Если кому-то нужно это вернуть, идем по пути <strong>/components/com_virtuemart/views/category/tmpl/default.php</strong> и смотрим, что нужно.</p>
+<p>Также добавил вызов шаблона кнопки Корзина, см. ниже</p>
+<p><strong>defautl_addtocart.php</strong> - шаблон кнопки Корзина с +\- и полем воода количества. Спионерил из шаблона страницы продукта.&nbsp;</p>
+<p>Еще хочу отметить, что <strong>echo $product-&gt;product_name</strong> заменил везде на <strong>echo htmlentities($product-&gt;product_name,ENT_QUOTES, "UTF-8")</strong>, потому что у меня много названий с кавычками, они обрывались на первых же кавычках, потому название не всегда отображалось верно в аттрибутах title для ссылки и изображения, а так же во всплывающем окошке после добавления в корзину.</p>
+<p>&nbsp;</p>
+<p>В принципе, это все. Замечу, что это не конкретное универсальное средство на все случаи. Это лишь демонстрация идеи, которая даст возможность нормально обновлять Virtuemart без риска потерять внесенные изменения</p>
+
+				</div>
+				
+				<div>
+				<h1>Virtuemart 2.0.2 - meta tag Description и meta tag Keywords на странице товара и категории</h1>
+				
+				<p>Расскажу, как вывести мета теги description и keywords на страницах товара и категории товаров.</p>
+
+<p>Имеем много товаров и категорий, заполнять вручную мета теги лень\нет времени\бесполезно. Когда сам столкнулся с этой проблемой, то не знал, как решить. Нашел вот здесь решение&nbsp;<a href="http://uawebs.net/ru/component/weblinks/weblink/43-blog/44-kolombet-artjom/13-http-itblog-yabl-info-2011-02-14-tegi-meta-i-keywords-dlya-virtuemart.html" target="_blank">http://itblog.yabl.info/2011/02/14/tegi-meta-i-keywords-dlya-virtuemart/</a>. &nbsp;За идею спасибо, но реализация, честно говоря, меня не устроила. Каждый раз при обновлении Vitruemart пришлось бы заново все переделывать. Поэтому взял идею и немного подправил реализацию.</p>
+<p>Итак, берем этот файл (это самодельный небольшой класс для Virtuemart, в котором пишу необходимые только для меня методы. Хотя, возможно, они кому-то тоже пригодятся) и пихаем по пути<strong>/components/com_virtuemart/helpers/vmsmallhelper.php</strong></p>
+<p><a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=40:vmsmallhelper-php" target="_blank">VmSmallHelper.php</a></p>
+<p>нас интересует метод</p>
+<p>&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #000000; font-weight: bold;">public</span> <a href="http://www.php.net/static"><span style="color: #990000;">static</span></a> <span style="color: #000000; font-weight: bold;">function</span> createKeywords<span style="color: #009900;">(</span><span style="color: #000088;">$sText</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">""</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">{</span></span>
+<span style="vertical-align: top;">	<span style="color: #000088;">$sKeywords</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">""</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;">	<a href="http://www.php.net/preg_match_all"><span style="color: #990000;">preg_match_all</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"/[a-zа-яёїъ]{3,}/iu"</span><span style="color: #339933;">,</span> JString<span style="color: #339933;">::</span><a href="http://www.php.net/strtolower"><span style="color: #990000;">strtolower</span></a><span style="color: #009900;">(</span><a href="http://www.php.net/strip_tags"><span style="color: #990000;">strip_tags</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$sText</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #000088;">$aKeywords</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><a href="http://www.php.net/is_array"><span style="color: #990000;">is_array</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$aKeywords</span><span style="color: #009900;">[</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #339933;">!</span><a href="http://www.php.net/empty"><span style="color: #990000;">empty</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$aKeywords</span><span style="color: #009900;">[</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">		<span style="color: #000088;">$sKeywords</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">self</span><span style="color: #339933;">::</span><span style="color: #004000;">limitStringByWord</span><span style="color: #009900;">(</span><a href="http://www.php.net/implode"><span style="color: #990000;">implode</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">", "</span><span style="color: #339933;">,</span> <a href="http://www.php.net/array_unique"><span style="color: #990000;">array_unique</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$aKeywords</span><span style="color: #009900;">[</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">255</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">return</span> <span style="color: #000088;">$sKeywords</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;"><span style="color: #009900;">}</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Как видно, в него передаем любой текст, метод выбирает все слова длиной 3 и более символа (Чтобы исключить союзы, предлоги, местоимения. Не все, конечно, но хотя бы некоторые. Может, кто-то дополнит каким-то словариком для исключений)</p>
+<p>Почему именно отдельный файл для класса? Это необходимо для того, чтобы при обновлении компонента ваш код не затирался. Поэтому и создали отдельный файл, о существовании которого установщик Virtuemart не знает.</p>
+<p><strong>1. Страница товара</strong></p>
+<p>1. Далее, открываем шаблон страницы товара</p>
+<p><strong>/templates/[TEMPLATE NAME]/html/com_virtuemart/productdetails/default.php</strong></p>
+<p>Если у вас такого файла нет, то скопируйте в указанное выше место файл&nbsp;</p>
+<p><strong>/components/com_virtuemart/views/productdetails/tmpl/default.php&nbsp;</strong></p>
+<p>Этой несложной процедурой вы просто создадите свой пользовательский шаблон страницы товара. Это необходимо для того, чтобы не править системные файлы Virtuemart и при обновлении не потерять правки.</p>
+<p>2. Открываем&nbsp;<strong>/templates/[TEMPLATE NAME]/html/com_virtuemart/productdetails/default.php&nbsp;</strong>&nbsp;и находим строку&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><a href="http://www.php.net/defined"><span style="color: #990000;">defined</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'_JEXEC'</span><span style="color: #009900;">)</span> or <a href="http://www.php.net/die"><span style="color: #990000;">die</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'Restricted access'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>сразу после нее подключаем наш класс, скачанный выше</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><span style="color: #339933;">!</span><a href="http://www.php.net/class_exists"><span style="color: #990000;">class_exists</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"VmSmallHelper"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">require</span><span style="color: #009900;">(</span>JPATH_VM_SITE<span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'helpers'</span><span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'vmsmallhelper.php'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>и добавляем код, устанавливающий мета теги description и keywords после создания переменной $document</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #000088;">$document</span> <span style="color: #339933;">=</span> JFactory<span style="color: #339933;">::</span><span style="color: #004000;">getDocument</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><a href="http://www.php.net/empty"><span style="color: #990000;">empty</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">metadesc</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #000088;">$document</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setDescription</span><span style="color: #009900;">(</span>VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">limitStringByWord</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><a href="http://www.php.net/strip_tags"><span style="color: #990000;">strip_tags</span></a><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><a href="http://www.php.net/str_replace"><span style="color: #990000;">str_replace</span></a><span style="color: #009900;">(</span><a href="http://www.php.net/array"><span style="color: #990000;">array</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">"<span style="color: #000099; font-weight: bold;">\r</span>"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">""</span><span style="color: #339933;">,</span> <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product_desc</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> </span>
+<span style="vertical-align: top;"><span style="color: #cc66cc;">500</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><a href="http://www.php.net/empty"><span style="color: #990000;">empty</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">metakey</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #000088;">$document</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setMetaData</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><span style="color: #0000ff;">"keywords"</span><span style="color: #339933;">,</span> </span>
+<span style="vertical-align: top;">VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">createKeywords</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product_name</span><span style="color: #339933;">.</span><span style="color: #0000ff;">" "</span><span style="color: #339933;">.</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">product_s_desc</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Обратите внимание на строки 3 и 9. Проверяем наличие заполненных мета тегов для товара. Если они заполнены, то они были установлены выше по коду, поэтому здесь мы их не заменяем. Другими словами, если вы заполнили поля мета тегов для товара, то выводится будут именно они, если же для какого-то товара вы оставили мета поля пустыми, то сработает этот код</p>
+<p>&nbsp;</p>
+<p><strong>2. Теперь для категории продуктов</strong></p>
+<p>1. Открываем файл&nbsp;<span style="font-weight: bold;">/components/com_virtuemart/views/category/tmpl/default.php</span></p>
+<p>Если такой отсутствует, то копируем&nbsp;<span style="font-weight: bold;">/components/com_virtuemart/views/</span><span style="font-weight: bold;">category</span><span style="font-weight: bold;">/tmpl/default.php&nbsp;</span>&nbsp;в&nbsp;<span style="font-weight: bold;">/components/com_virtuemart/views/</span><span style="font-weight: bold;">category</span><span style="font-weight: bold;">/tmpl/default.php</span></p>
+<p>2. Находим строку</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><a href="http://www.php.net/defined"><span style="color: #990000;">defined</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'_JEXEC'</span><span style="color: #009900;">)</span> or <a href="http://www.php.net/die"><span style="color: #990000;">die</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'Restricted access'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>и добавляем после нее</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><span style="color: #339933;">!</span><a href="http://www.php.net/class_exists"><span style="color: #990000;">class_exists</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"VmSmallHelper"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">require</span><span style="color: #009900;">(</span>JPATH_VM_SITE<span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'helpers'</span><span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'vmsmallhelper.php'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Затем спускаемся чуть ниже и вставляем после создания переменной $document нужный нам код</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">document <span style="color: #339933;">=</span> JFactory<span style="color: #339933;">::</span><span style="color: #004000;">getDocument</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><a href="http://www.php.net/empty"><span style="color: #990000;">empty</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">metadesc</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #000088;">$document</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setDescription</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;">VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">limitStringByWord</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><a href="http://www.php.net/strip_tags"><span style="color: #990000;">strip_tags</span></a><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><a href="http://www.php.net/str_replace"><span style="color: #990000;">str_replace</span></a><span style="color: #009900;">(</span><a href="http://www.php.net/array"><span style="color: #990000;">array</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"<span style="color: #000099; font-weight: bold;">\r</span>"</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">""</span><span style="color: #339933;">,</span> <span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category_description</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">500</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><a href="http://www.php.net/empty"><span style="color: #990000;">empty</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">metakey</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #000088;">$document</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setMetaData</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><span style="color: #0000ff;">"keywords"</span><span style="color: #339933;">,</span> </span>
+<span style="vertical-align: top;">VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">createKeywords</span><span style="color: #009900;">(</span></span>
+<span style="vertical-align: top;"><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category_name</span><span style="color: #339933;">.</span><span style="color: #0000ff;">" "</span><span style="color: #339933;">.</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">category_description</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>В принципе, это все. Только не забудьте сохранить файлы и протестировать:)&nbsp;</p>
+<p>Пример можно посмотреть здесь</p>
+<p><a href="http://samovar.kharkov.ua/katalog-chaya/chernyj-chaj/dardjiling-detail.html">http://samovar.kharkov.ua/katalog-chaya/chernyj-chaj/dardjiling-detail.html</a></p>
+
+				</div>
+				
+				<div>
+					<h1>Virtuemart 2.0.2 - настраиваемые поля на странице категории</h1>
+					
+<p>Статья в виде пошаговой инструкции, без лирческих отступлений:)</p>
+<hr id="system-readmore" />
+<p><br />1) берете файл&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=40:vmsmallhelper-php" target="_blank">VmSmallHelper.php</a><br /><br />и кладете&nbsp;<strong>/components/com_virtuemart/helpers</strong></p>
+<p><strong>&nbsp;</strong><br />2) Затем создаете настраиваемые поля и смотрите их ID в админке Virtuemart.&nbsp;</p>
+<p><br />3) открываете файл <strong>/templates/[template_name]/html/com_virtuemart/category/default.php&nbsp;</strong></p>
+<p>и подключаете наш хелпер из пункта [1]</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><a href="http://www.php.net/defined"><span style="color: #990000;">defined</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'_JEXEC'</span><span style="color: #009900;">)</span> or <a href="http://www.php.net/die"><span style="color: #990000;">die</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'Restricted access'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">if</span><span style="color: #009900;">(</span><span style="color: #339933;">!</span><a href="http://www.php.net/class_exists"><span style="color: #990000;">class_exists</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">"VmSmallHelper"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span></span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">require</span><span style="color: #009900;">(</span>JPATH_VM_SITE<span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'helpers'</span><span style="color: #339933;">.</span>DS<span style="color: #339933;">.</span><span style="color: #0000ff;">'vmsmallhelper.php'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>4) находите строки&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #666666; font-style: italic;">// Start the Output</span></span>
+<span style="vertical-align: top;">&nbsp;</span>
+<span style="vertical-align: top;"><span style="color: #b1b100;">foreach</span> <span style="color: #009900;">(</span><span style="color: #000088;">$this</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">products</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$product</span> <span style="color: #009900;">)</span> <span style="color: #009900;">{</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>это вывод продуктов в цикле.&nbsp;</p>
+<p><br />5) затем в том месте, где нужно вывести какое-то настраиваемое поле пишете следующее</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><a href="http://www.php.net/echo"><span style="color: #990000;">echo</span></a> VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">getCustomFieldValue</span><span style="color: #009900;">(</span><span style="color: #000088;">$product</span><span style="color: #339933;">,</span> <span style="color: #000088;">$iFieldId</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>где $iFieldId заменяете на номер настраиваемого поля, которое смотрели в пункте [2]<br />Этот код выведет именно значение настраиваемого поля.&nbsp;</p>
+<p><br />6) Если нужно получить все поле, то&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><span style="color: #000088;">$oField</span> <span style="color: #339933;">=</span> VmSmallHelper<span style="color: #339933;">::</span><span style="color: #004000;">getCustomFieldValue</span><span style="color: #009900;">(</span><span style="color: #000088;">$product</span><span style="color: #339933;">,</span> <span style="color: #000088;">$iFieldId</span><span style="color: #339933;">,</span> <span style="color: #000000; font-weight: bold;">true</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>код вернет объект поля, сделайте&nbsp;</p>
+<div class="rj_insertcode">
+<div class="rj_insertcode_php">
+<table class="php" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;"><a href="http://www.php.net/var_dump"><span style="color: #990000;">var_dump</span></a><span style="color: #009900;">(</span><span style="color: #000088;">$oField</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>увидете, какие свойства хранят какие значения</p>
+<p>Вот и все:)</p>
+
+				</div>
+				
+				<div>
+					<h1>Community Builder 1.2.1 - русификация, украинизация</h1>
+					
+					<p style="text-align: justify;">Недавно столкнулся с задачей расширить стандартную форму регистрации Joomla 1.5</p>
+<p style="text-align: justify;">Гугл помог, как всегда:)</p>
+<p style="text-align: justify;">Для этой задачи отлично подошел компонент <a href="http://www.joomlapolis.com/" target="_blank">Community Builder 1.2.1</a></p>
+<div style="text-align: justify;"><hr id="system-readmore" /></div>
+<p style="text-align: justify;">Правда, глюковатый он немного, но со своей задачей справляется. Тем более, распространяется бесплатно.</p>
+<p style="text-align: justify;">Community Builder 1.2.1 (<strong>СВ 1.2.1</strong>) предоставляет возможность задавать необходимые поля, которые вы хотите видеть при регистрации. Ассортимент очень широкий. Начиная от простых текстовых полей, заканчивая полем даты (например, для указания даты рождения).</p>
+<div style="text-align: center;"><span style="font-weight: normal; font-size: small;"><strong><em>Есть много минусов, один из которых - локализация.</em></strong></span></div>
+<ul>
+<li style="text-align: justify;"><span style="line-height: 24px; font-size: 16px;"><span style="font-size: 8pt;">Существует русифицированная версия СВ 1.1, которую "локализаторы" позиционируют как полноценную версию с русским интерфейсом. Но после ее установки в меню СВ почти все было квардатами/ромбиками (в зависимости от браузера). А кое-что оставалось на английском. Вот такая "полноценная версия с русским интерфейсом". Поэтому я даже ссылку на этот ресурс давать не буду, чтобы не сбить с толку никого. Компонент сам по себе ведь </span><em><span style="font-size: 8pt;">хороший</span></em><span style="font-size: 8pt;">...&nbsp;</span></span></li>
+<li style="text-align: justify;"><span style="line-height: 24px;"><span style="font-size: 8pt;">Нашел несколько плагинов, которые, по заявлению авторов, "локализировали" этот компонент. Но эти плагины как правило, не ставились, приходилось куда-то что-то копировать, заменять, добавлять и т.д. Больше чем в половине случаев после таких действий были проблемы с кодировкой. Ну да ладно, можно сохранить в правильной кодировке файлы локализаций - и забыть.</span></span></li>
+</ul>
+<p style="text-align: justify;">Но у меня стояла задача <span style="color: #ff0000;"><strong>подружить СВ 1.2.1 с JoomFish (2.0.4)</strong></span>. И вот здесь начались реальные проблемы. Снова нашел через гугл поделие, иначе не назовешь, которое позволяло интегрировать СВ 1.2.1 и JoomFish. После копирования всех файлов из архива в нужные места (не установки, а ручного копирования. Ну да ладно, лишь бы работало) вроде бы все стало ОК.</p>
+<p style="text-align: justify;">Но до тех пор, пока не решил все же перевести что-то с помощью JoomFish. Независимо, что: СВ 1.2.1, любое меню, любой материал, - получал на выходе вот такую ошибку в браузере</p>
+<hr />
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="line-height: 15px; font-size: 11px; color: #ff0000;">DB function failed with error number 1146</span></div>
+<div style="text-align: center;"><span style="line-height: 15px; font-size: 11px;">Table 'krona.jos_comprofiler_fields' doesn't exist SQL=SELECT f.`title` , jf.`value` FROM `jos_comprofiler_fields` AS f INNER JOIN `jos_jf_content` AS jf ON f.`fieldid` = jf.`reference_id` WHERE f.`name` LIKE "cb_%" AND jf.`language_id` = 1 AND jf.`reference_table` = "comprofiler_fields"union SELECT f.`fieldtitle` , jf.`value` FROM `jos_comprofiler_field_values` AS f INNER JOIN `jos_jf_content` AS jf ON f.`fieldvalueid` = jf.reference_id WHERE jf.language_id = 1 AND jf.reference_table = "comprofiler_field_values"</span></div>
+<hr style="text-align: justify;" />
+<p style="text-align: justify;"><span style="font-size: small;">То ли руки у меня кривые, то ли...&nbsp;<span style="font-size: small;">Короче, я сделал вывод, что нифига так не получится.</span></span></p>
+<h1 style="text-align: justify;">Пришел к простому решению:&nbsp;</h1>
+<ul>
+<li style="text-align: justify;"><span style="line-height: 27px; font-size: 16px;"><span style="font-size: 8pt;">создать файлы с необходимыми локализациями, например </span><em><span style="font-size: 8pt;">rus.php, eng.php, ukr.php</span></em></span></li>
+<li style="text-align: justify;"><span style="line-height: 27px; font-size: 16px;"><em><span style="font-size: 8pt;">&nbsp;</span></em><span style="font-size: 8pt;">создать пустой файл с названием </span><em><span style="font-size: 8pt;">default_language.php</span></em><span style="font-size: 8pt;">, потому что именно из этого файла компонент берет перевод</span></span></li>
+<li>
+<div style="text-align: justify;"><span style="line-height: 27px; font-size: small;"><span style="font-size: 8pt;">вставить в файл </span><em><span style="font-size: 8pt;">default_language.php </span></em><span style="font-size: 8pt;">такой код&nbsp;</span></span></div>
+</li>
+</ul>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">&lt;?php</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">$document = &amp; JFactory::getDocument();</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">$curlang = $document-&gt;language;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">&nbsp;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">switch ($curlang) {</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">case 'ru-ru':</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">include('default_language-ru.php');</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">break;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">case 'uk-ua':</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">include('default_language-uk.php');</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">break;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">case 'en-gb':</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">include('default_language-en.php');</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">break;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">&nbsp;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">}</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">&nbsp;</div>
+<div style="text-align: justify; position: absolute; left: -10000px; top: 798px; width: 1px; height: 1px; overflow: hidden;">?&gt;</div>
+<table class="abap" style="border-collapse: collapse; width: 100%; border: 1px solid #054b6e; background: none repeat scroll 0% 0% #f8f8f8;">
+<tbody>
+<tr class="li1">
+<td style="width: 1px; background: none repeat scroll 0% 0% #f0f0f0; vertical-align: top; color: #676f73; border-right: 1px dotted #dddddd; font-size: 12px; text-align: right;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre>
+</td>
+<td style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;">
+<pre style="margin: 0; background: none; vertical-align: top; padding: 0px 4px; font-size: 12px;"><span style="vertical-align: top;">&lt;?php  </span>
+<span style="vertical-align: top;">$document <span style="color: #66cc66;">=</span> <span style="color: #66cc66;">&amp;</span> JFactory<span style="color: #66cc66;">::</span><span style="color: #202020;">getDocument</span><span style="color: #66cc66;">(</span><span style="color: #66cc66;">)</span>; </span>
+<span style="vertical-align: top;">$curlang <span style="color: #66cc66;">=</span> $document<span style="color: #66cc66;">-</span>&gt;language; </span>
+<span style="vertical-align: top;">switch <span style="color: #66cc66;">(</span>$curlang<span style="color: #66cc66;">)</span> <span style="color: #66cc66;">{</span> </span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">case</span> <span style="color: #ff0000;">'ru-ru'</span><span style="color: #66cc66;">:</span> </span>
+<span style="vertical-align: top;">		<a href="http://sap4.com/wiki/index.php?title=include"><span style="color: #000066;">include</span></a><span style="color: #66cc66;">(</span><span style="color: #ff0000;">'default_language-ru.php'</span><span style="color: #66cc66;">)</span>;  </span>
+<span style="vertical-align: top;">	break;  </span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">case</span> <span style="color: #ff0000;">'uk-ua'</span><span style="color: #66cc66;">:</span> </span>
+<span style="vertical-align: top;">		<a href="http://sap4.com/wiki/index.php?title=include"><span style="color: #000066;">include</span></a><span style="color: #66cc66;">(</span><span style="color: #ff0000;">'default_language-uk.php'</span><span style="color: #66cc66;">)</span>;  </span>
+<span style="vertical-align: top;">	break;  </span>
+<span style="vertical-align: top;">	<span style="color: #b1b100;">case</span> <span style="color: #ff0000;">'en-gb'</span><span style="color: #66cc66;">:</span>  </span>
+<span style="vertical-align: top;">		<a href="http://sap4.com/wiki/index.php?title=include"><span style="color: #000066;">include</span></a><span style="color: #66cc66;">(</span><span style="color: #ff0000;">'default_language-en.php'</span><span style="color: #66cc66;">)</span>;  </span>
+<span style="vertical-align: top;">	break;  <span style="color: #66cc66;">}</span>  </span>
+<span style="vertical-align: top;">?&gt;</span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>который определяет текущий язык сайта, а затем в зависимости от значения переменной&nbsp;<em><strong>$curlang</strong></em>&nbsp;подключает определенный языковой файл</p>
+<div style="text-align: center;"><span style="font-weight: normal; font-size: small;"><strong>На будущее я сделал себе готовый архив и алгоритм действий</strong></span></div>
+<ul>
+<li style="text-align: justify;"><span style="line-height: 24px;"><span style="font-size: 8pt;">Устанавливаем СВ 1.2.1.&nbsp;</span></span></li>
+<li style="text-align: justify;"><span style="line-height: 24px;"><span style="font-size: 8pt;">Берем архив&nbsp;<a href="http://uawebs.net/ru/blog-ru/file-archive/blogi/kolombet-artjom.html?download=32:cb-1-2-1-multilang" target="_blank">CB 1.2.1 MultiLang</a></span></span></li>
+<li style="text-align: justify;"><span style="line-height: 24px; font-size: small;"><span style="font-size: 8pt;">Копируем в папку </span><em><span style="font-size: 8pt;">/components/com_comprofiler/plugin/language/ </span></em><span style="font-size: 8pt;">все содержимое.&nbsp;</span></span></li>
+<li style="text-align: justify;"><span style="line-height: 24px;"><span style="font-size: 8pt;">Таким образом получили английский, украинский &nbsp;и русский интерфейсы в зависимости от выбранного языка.&nbsp;</span></span></li>
+</ul>
+<p style="text-align: justify;"><span style="color: #ff0000;">Естественно, JoomFifh должен быть установлен с теми языками, которые вам нужны</span></p>
+<p style="text-align: justify;">Решение это не элегантное, решение это - костыль. Но оно работает, оно действительно работает!</p>
+
+				</div>
+				
+			</td>
+			<td class="col-sm-3"></td>
+		</tr>
+	</tbody>
+</table>
+
+
+</body>
+</html>
