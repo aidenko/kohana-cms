@@ -230,11 +230,6 @@ class Model_Database_Domains extends Model_System_ApplicationModelDatabase
 		return $aDomain[0] > 0 ? $aDomain[0] : false;	
 	}
 	
-	private function deleteDomain($iDomainId = null, $sName = '')
-	{
-		
-	}
-	
 	public function insertArchive($iDomainId, $sPriceType, $sPrice = '', $sPriceAddedDatetime = '', $sPriceAddedIpv4 = '')
 	{	
 		ob_start();?>
@@ -274,6 +269,67 @@ class Model_Database_Domains extends Model_System_ApplicationModelDatabase
 		$aArchive = $oQuery->execute();
 		
 		return $aArchive[0] > 0 ? $aArchive[0] : false;
+	}
+	
+	/**
+	 * Model_Database_Domains::selectDomains()
+	 * 
+	 * @param integer $bHosting. -1 - select all, 0 - selece domains only, 1 - select hostings only. default -1
+	 * @param bool $bActiveOnly. true - select active only, false - select all. default true 
+	 * @param bool $bIncludeDeleted. true - include deleted in the result. false - return only not deleted. default false
+	 * @return void
+	 */
+	public function selectDomains($bHosting = -1, $bActiveOnly = true, $bIncludeDeleted = false)
+	{
+		ob_start();?>
+		
+		SELECT
+			sdo_id,
+		  sdo_name,
+		  sdo_hosting,
+		  sdo_active,
+		  sdo_created_datetime,
+		  sdo_ipv4_id,
+		  sdo_modified_datetime,
+		  sdo_modified_ipv4_id,
+		  sdo_deleted,
+		  sdo_deleted_datetime,
+		  sdo_deleted_ipv4_id
+	  
+		FROM  <?=$this->oDbConfig['default']['table_prefix'].$this->oConfig['db']['domains']?>
+		
+		WHERE	
+			sdo_id > 0
+			
+		<?php if($bActiveOnly) { ?>
+			AND sdo_active = 1
+		<?php }
+			
+		if($bHosting >= 0) { ?>
+			AND sdo_hosting = :sdo_hosting
+		<?php }
+		
+		if(!$bIncludeDeleted) { ?>
+			AND (sdo_deleted IS NULL OR sdo_deleted = '' OR sdo_deleted = 0)
+		<?php } ?>
+
+		<?php $sQuery = ob_get_clean();
+		
+		$oQuery = DB::query(Database::SELECT, $sQuery);
+		
+		$aParam = array();
+		
+		if($bHosting >= 0)
+			$aParam[':sdo_hosting'] = intval($bHosting);
+		
+		$oQuery->parameters($aParam);
+			
+		return $oQuery->as_object()->execute()->as_array();
+	}
+	
+	private function deleteDomain($iDomainId = null, $sName = '')
+	{
+		
 	}
 	
 	private function deleteArchive()

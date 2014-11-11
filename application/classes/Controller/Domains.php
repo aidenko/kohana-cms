@@ -138,30 +138,27 @@ class Controller_Domains extends Controller_System_Component
 		//echo View::factory('profiler/stats');
 	}
 	
-	public function action_index__()
+	public function action_index()
 	{	
-		$oMetaData = new Model_Metadata;
-		$oArticle = new Model_Article;
-		$oPagination = (object) Kohana::$config->load('pagination');
-		$iPage = $this->request->param('page');
+		//$oMetaData = new Model_Metadata;
+		//$oArticle = new Model_Article;
+		$oDomain = new Model_Domains;
+		//$oPagination = (object) Kohana::$config->load('pagination');
+		//$iPage = $this->request->param('page');
 		
-		$this->setTitle($oMetaData->getTitle($this->request->controller(), 2).' - Page '.$iPage);
+		//$this->setTitle($oMetaData->getTitle($this->request->controller(), 2).' - Page '.$iPage);
 		
-		$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2).', page '.$iPage);
-		$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2).' - Page '.$iPage);
+		//$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2).', page '.$iPage);
+		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2).' - Page '.$iPage);
 		
-		$this->addStyle($this->path->css_template.$this->getTemplateName().'/articles.css', 2);
-		$this->addStyle($this->path->css_template.$this->getTemplateName().'/article-content.css', 2);
-		$this->addStyle($this->path->css_template.$this->getTemplateName().'/pagination.css', 2);
+		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/articles.css', 2);
+		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/article-content.css', 2);
+		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/pagination.css', 2);
 		
 		$this->setBody(
 			View::factory(
-				$this->path->view_template.'main/block/main', 
-				array('aArticles' => $oArticle->getArticles(
-					($iPage - 1) * $oPagination->default['items_per_page'],
-					$oPagination->default['items_per_page']),
-					'sPagination' => Pagination::factory(array('total_items' => $oArticle->getCountArticles()))->route_params(array('controller' => 'mainpage', 'action' => 'index'))
-				))->render()
+				$this->path->view_template.'main/block/domains_list', 
+				array('aDomains' => $oDomain->selectDomains(0, true)))->render()
 		);
 		//$token = Profiler::start('test', 'profiler');
 		

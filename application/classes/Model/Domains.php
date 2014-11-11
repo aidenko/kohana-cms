@@ -71,7 +71,9 @@ class Model_Domains extends Model_System_ApplicationModel
 			$aPriceType = array($mPriceType);
 		elseif(is_array($mPriceType))
 			$aPriceType = $mPriceType;
-		else
+		elseif($mPriceType === true)
+			$aPriceType = array(self::PRICE_TYPE_RETAIL, self::PRICE_TYPE_BRONSE, self::PRICE_TYPE_SILVER, self::PRICE_TYPE_GOLD, self::PRICE_TYPE_PLATINUL);
+		else	
 			$aPriceType = null;
 			
 		$aResult = array();	
@@ -99,4 +101,26 @@ class Model_Domains extends Model_System_ApplicationModel
 		return $aResult;
 	}
 	
+	/**
+	 * Model_Domains::selectDomains()
+	 * 
+	 * @param integer $bHosting. -1 - select all, 0 - selece domains only, 1 - select hostings only. default -1
+	 * @param mixed $aGetPrices. default NULL. if null or false - does not select prices. If TRUE - returns all domain prices. If array, returns type prices from this array. for example, array(self::PRICE_TYPE_RETAIL, self::PRICE_TYPE_BRONSE, self::PRICE_TYPE_SILVER, self::PRICE_TYPE_GOLD, self::PRICE_TYPE_PLATINUL)
+	 * @param bool $bActiveOnly. true - select active only, false - select all. default true 
+	 * @param bool $bIncludeDeleted. true - include deleted in the result. false - return only not deleted. default false
+	 * @return void
+	 */
+	public function selectDomains($bHosting = -1, $aGetPrices = null , $bActiveOnly = true, $bIncludeDeleted = false)
+	{
+		if($aGetPrices === true)
+			$aGetPrices = array(self::PRICE_TYPE_RETAIL, self::PRICE_TYPE_BRONSE, self::PRICE_TYPE_SILVER, self::PRICE_TYPE_GOLD, self::PRICE_TYPE_PLATINUL);
+		
+		$aDomains = $this->oDbModel->selectDomains($bHosting, $bActiveOnly, $bIncludeDeleted);
+		
+		if(!(is_null($aGetPrices) or $aGetPrices === false))
+			foreach($aDomains as &$d)
+				$d->prices = $this->getPrice($d->sdo_id, '', $aGetPrices);
+		
+		return $aDomains;
+	}
 }
