@@ -146,19 +146,36 @@ class Controller_Domains extends Controller_System_Component
 		//$oPagination = (object) Kohana::$config->load('pagination');
 		//$iPage = $this->request->param('page');
 		
-		//$this->setTitle($oMetaData->getTitle($this->request->controller(), 2).' - Page '.$iPage);
+		//$this->setTitle($oMetaData->getTitle($this->request->controller(), 2));
 		
-		//$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2).', page '.$iPage);
-		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2).' - Page '.$iPage);
+		//$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2));
+		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2));
 		
-		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/articles.css', 2);
-		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/article-content.css', 2);
-		//$this->addStyle($this->path->css_template.$this->getTemplateName().'/pagination.css', 2);
+		$this->addStyle($this->path->css_template.$this->getTemplateName().'/domains.css', 2);
+		$this->addScript('https://code.angularjs.org/angular-1.0.0.min.js', 1);
+		$this->addScript($this->path->js.'domains.js', 2);
+		
+		
+		$this->oConfig = (object) Kohana::$config->load('sell_domains');
+		
+		$aDomainsQuery = $oDomain->selectDomains(0, $this->oConfig['sell_price']);
+		//$aDomainsQuery = $oDomain->selectDomains(0, true);
+		$aDomains = array();
+		
+		foreach($aDomainsQuery as &$domain)
+		{
+			$domain->prices = array_map(array(get_class($this), 'implodePrices'), $domain->prices);
+			$aDomains[] = $domain;	
+		}
+		
 		
 		$this->setBody(
 			View::factory(
 				$this->path->view_template.'main/block/domains_list', 
-				array('aDomains' => $oDomain->selectDomains(0, true)))->render()
+				array(
+					'aDomains' => $aDomains,
+					'sSearchHtml' => View::factory($this->path->view_template.'main/block/domains_search', array(), true)
+				))->render()
 		);
 		//$token = Profiler::start('test', 'profiler');
 		
@@ -170,4 +187,9 @@ class Controller_Domains extends Controller_System_Component
 		
 		//echo View::factory('profiler/stats'); 
 	}
+	
+	public function implodePrices($price)
+	{
+		return '<span class="domain-attribute price">'.number_format(round($price * (1 + $this->oConfig['sell_interest'])), 2, '.', '').' '.$this->oConfig['sell_currency'].'</span>';
+	} 
 }	

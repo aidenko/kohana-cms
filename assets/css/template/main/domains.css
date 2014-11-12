@@ -1,0 +1,23 @@
+/*.domains-list
+{
+	
+}*/
+
+.domains-list .domain-attribute
+{
+	display: inline-block;
+	height: 25px;
+	width: 150px;
+	line-height: 25px;
+	padding: 3px;
+}
+
+.domains-list .domain:nth-child(2n)
+{
+	background-color: #dee2e9;
+}
+
+.domains-list .domain:hover
+{
+	background-color: #c5e9ec;
+}

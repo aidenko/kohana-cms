@@ -2,6 +2,10 @@
 
 return array(
 	'url' => 'https://www.ukraine.com.ua/info/resellers/',
+	//it is pricefor selling
+	'sell_price' => 'silver',
+	'sell_interest' => 0.1,
+	'sell_currency' => 'грн',
 	
 	'db' => array(
 		'domains' => 'sell_domain',
