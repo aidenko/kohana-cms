@@ -25,8 +25,6 @@ class Controller_Domains extends Controller_System_Component
 	{	
 		$this->oConfig = (object) Kohana::$config->load('sell_domains');
 		
-		//$token = Profiler::start('test', 'profiler');
-		
 		$aMatch = array();
 		
 		preg_match('/.*\<body.*?\>(.*)\<\/body\>.*/s', iconv("Windows-1251//IGNORE", "UTF-8//IGNORE", file_get_contents($this->oConfig['url'])), $aMatch);
@@ -106,60 +104,33 @@ class Controller_Domains extends Controller_System_Component
 				}
 			}
 		}
-		
-		//var_dump($aPrices);
-		
+
 		foreach($aPrices['domain'] as $name => $prices)
 			$oDomain->addDomain($name, $prices);
 			
 		foreach($aPrices['hosting'] as $name => $prices)
 			$oDomain->addDomain($name, $prices, true, true);
-		//var_dump(count($aTables));
-		
-		//$sResponse = '<table>'.$aTables[1][0].'</table>';
-		
-		
-		//var_dump($aPrices);
-		/*foreach($aTables as $i => $s)
-		
-				$sResponse .= $s;*/
-		
-		//$this->setBody($sResponse);
-		
-		//$this->setBody('dfdfdf');
-		
-		
-		//$ss = $oDomain->getDomain('com.ua', 0, array('retail', 'gold'));
-		
-		//var_dump($ss);
-		
-		//Profiler::stop($token);
-		
-		//echo View::factory('profiler/stats');
+
 	}
 	
 	public function action_index()
 	{	
 		//$oMetaData = new Model_Metadata;
-		//$oArticle = new Model_Article;
 		$oDomain = new Model_Domains;
-		//$oPagination = (object) Kohana::$config->load('pagination');
-		//$iPage = $this->request->param('page');
-		
+
 		//$this->setTitle($oMetaData->getTitle($this->request->controller(), 2));
 		
 		//$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2));
 		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2));
 		
 		$this->addStyle($this->path->css_template.$this->getTemplateName().'/domains.css', 2);
-		$this->addScript('https://code.angularjs.org/angular-1.0.0.min.js', 1);
+		$this->addScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js', 1);
 		$this->addScript($this->path->js.'domains.js', 2);
 		
 		
 		$this->oConfig = (object) Kohana::$config->load('sell_domains');
 		
 		$aDomainsQuery = $oDomain->selectDomains(0, $this->oConfig['sell_price']);
-		//$aDomainsQuery = $oDomain->selectDomains(0, true);
 		$aDomains = array();
 		
 		foreach($aDomainsQuery as &$domain)
@@ -177,15 +148,7 @@ class Controller_Domains extends Controller_System_Component
 					'sSearchHtml' => View::factory($this->path->view_template.'main/block/domains_search', array(), true)
 				))->render()
 		);
-		//$token = Profiler::start('test', 'profiler');
-		
-		//$this->addStyle($this->path->css.'login-form.css', 10);
-		
-		//$this->setBody($this->renderControllerView());
-		
-		//Profiler::stop($token);
-		
-		//echo View::factory('profiler/stats'); 
+
 	}
 	
 	public function implodePrices($price)

@@ -37,7 +37,7 @@ class Controller_Action_Domains extends Controller_System_Action
 		$values = array('php', 'web', 'angularjs', 'js');
 		
 		// Check if the keywords are in our array
-		if(in_array($objData->data, $values)) {
+		if(isset($objData->data) && in_array($objData->data, $values)) {
 			echo 'I have found what you\'re looking for!';
 		}
 		else {
