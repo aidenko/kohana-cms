@@ -124,8 +124,11 @@ class Controller_Domains extends Controller_System_Component
 		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2));
 		
 		$this->addStyle($this->path->css_template.$this->getTemplateName().'/domains.css', 2);
-		$this->addScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js', 1);
-		$this->addScript($this->path->js.'domains.js', 2);
+		$this->addScript('//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js', 1);
+		//$this->addScript('//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.js', 2);
+		$this->addScript($this->path->js.'domains.js', 3, 'footer');
+		//$this->addScript($this->path->js.'jquery-2.1.0.min.js', 1, 'footer');
+		//$this->addScript($this->path->js.'domains-jquery.js', 2, 'footer');
 		
 		
 		$this->oConfig = (object) Kohana::$config->load('sell_domains');

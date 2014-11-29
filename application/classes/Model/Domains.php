@@ -123,4 +123,9 @@ class Model_Domains extends Model_System_ApplicationModel
 		
 		return $aDomains;
 	}
+	
+	public function findDomainByLike($sAttribute, $sLike = '')
+	{
+		return $this->oDbModel->findDomainByLike($sAttribute, $sLike);
+	}
 }

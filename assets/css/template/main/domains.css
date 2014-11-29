@@ -2,6 +2,10 @@
 {
 	
 }*/
+.domains-list .domain
+{
+	display: inline-block;
+}
 
 .domains-list .domain-attribute
 {
@@ -12,7 +16,8 @@
 	padding: 3px;
 }
 
-.domains-list .domain:nth-child(2n)
+.domains-list .domain:nth-child(4n),
+.domains-list .domain:nth-child(4n+1)
 {
 	background-color: #dee2e9;
 }

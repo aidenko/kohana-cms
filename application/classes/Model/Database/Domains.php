@@ -347,4 +347,30 @@ class Model_Database_Domains extends Model_System_ApplicationModelDatabase
 		
 		return $this->iIpAddressId;
 	}
+	
+	public function findDomainByLike($sAttribute, $sLike = '')
+	{
+		ob_start();?>
+		SELECT
+		  sdo_id,
+		  sdo_name,
+		  sdo_hosting,
+		  sdo_active,
+		  sdo_deleted
+		FROM akb_sell_domain
+		WHERE sdo_active = 1
+		    AND (sdo_deleted IS NULL
+		          OR sdo_deleted = ''
+		          OR sdo_deleted = '0')
+		          
+		    AND <?=$sAttribute?> LIKE :sdo_like      
+		
+		<?php $sQuery = ob_get_clean();
+		
+		$oQuery = DB::query(Database::SELECT, $sQuery);
+		
+		$oQuery->param(':sdo_like', '%'.$sLike.'%');
+			
+		return $oQuery->as_object()->execute()->as_array();
+	}
 }

@@ -16,33 +16,31 @@ class Controller_Action_Domains extends Controller_System_Action
 {
 	public function action_index()
 	{
-		// The request is a JSON request.
-		// We must read the input.
-		// $_POST or $_GET will not work!
+		$objData = json_decode(file_get_contents("php://input"));
 		
-		$data = file_get_contents("php://input");
+		$oDomain = new Model_Domains;
 		
-		$objData = json_decode($data);
+		$sKeyword = isset($objData->data) ? $objData->data : "";
 		
-		// perform query or whatever you wish, sample:
+		if(!empty($sKeyword))
+		{
+			$aDomains = $oDomain->findDomainByLike('sdo_name', $objData->data);
 		
-		/*
-		$query = 'SELECT * FROM
-		tbl_content
-		WHERE
-		title="'. $objData->data .'"';
-		*/
-		
-		// Static array for this demo
-		$values = array('php', 'web', 'angularjs', 'js');
-		
-		// Check if the keywords are in our array
-		if(isset($objData->data) && in_array($objData->data, $values)) {
-			echo 'I have found what you\'re looking for!';
+			$sResult = 'START';
+			
+			foreach($aDomains as $d)
+			{
+				$sResult .= $d->sdo_name.';';
+			}
+			
+			$sResult .= 'END';
+			
+			echo $sResult;	
 		}
-		else {
-			echo 'Sorry, no match!';
-		}
+		
+		
+		
+		//return;
 	}
 	
 	public function create_comment()
