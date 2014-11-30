@@ -118,10 +118,10 @@ class Controller_Domains extends Controller_System_Component
 		//$oMetaData = new Model_Metadata;
 		$oDomain = new Model_Domains;
 
-		//$this->setTitle($oMetaData->getTitle($this->request->controller(), 2));
+		$this->setTitle($oMetaData->getTitle($this->request->controller(), 2));
 		
-		//$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2));
-		//$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2));
+		$this->setMetaKeywords($oMetaData->getKeywords($this->request->controller(), 2));
+		$this->setMetaDescription($oMetaData->getDescription($this->request->controller(), 2));
 		
 		$this->addStyle($this->path->css.'domains.css', 2);
 		$this->addScript('//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js', 1);
