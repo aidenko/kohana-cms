@@ -115,7 +115,7 @@ class Controller_Domains extends Controller_System_Component
 	
 	public function action_index()
 	{	
-		//$oMetaData = new Model_Metadata;
+		$oMetaData = new Model_Metadata;
 		$oDomain = new Model_Domains;
 
 		$this->setTitle($oMetaData->getTitle($this->request->controller(), 2));
