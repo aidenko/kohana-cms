@@ -1,0 +1,1 @@
+var domainsSearch = angular.module('domainsSearch', []);

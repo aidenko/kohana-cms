@@ -1,7 +1,17 @@
-/*.domains-list
+
+.domains .search-input
 {
-	
-}*/
+	font-size: 16px;
+	height: 25px;
+	width: 250px;
+}
+
+.domains .search-sort
+{
+	height: 30px;
+	width:225px;
+}
+
 .domains-list .domain
 {
 	display: inline-block;
@@ -16,8 +26,8 @@
 	padding: 3px;
 }
 
-.domains-list .domain:nth-child(4n),
-.domains-list .domain:nth-child(4n+1)
+.domains-list .domain:nth-child(4n+1),
+.domains-list .domain:nth-child(4n+2)
 {
 	background-color: #dee2e9;
 }

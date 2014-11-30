@@ -20,27 +20,24 @@ class Controller_Action_Domains extends Controller_System_Action
 		
 		$oDomain = new Model_Domains;
 		
-		$sKeyword = isset($objData->data) ? $objData->data : "";
+		$this->oConfig = (object) Kohana::$config->load('sell_domains');
+	
+		$aDomains = array();
 		
-		if(!empty($sKeyword))
-		{
-			$aDomains = $oDomain->findDomainByLike('sdo_name', $objData->data);
+		foreach($oDomain->selectDomains(0, $this->oConfig['sell_price']) as $domain)
+			$aDomains[] = array('sdo_name' => $domain->sdo_name, 'price' => $this->calculatePrice($domain->prices[$this->oConfig['sell_price']]));	
 		
-			$sResult = 'START';
-			
-			foreach($aDomains as $d)
-			{
-				$sResult .= $d->sdo_name.';';
-			}
-			
-			$sResult .= 'END';
-			
-			echo $sResult;	
-		}
-		
-		
-		
-		//return;
+		return print_r(json_encode(array('domain' => $aDomains, 'currency' => $this->oConfig['sell_currency'])));
+	}
+	
+	private function calculatePrice($fPrice = 0.00)
+	{
+		return round($fPrice * (1 + $this->oConfig['sell_interest']));
+	}
+	
+	public function action_get_template_list()
+	{
+		echo View::factory($this->path->view_template.'main/block/domains_list', array('lang' => $this->getLangFile()))->render();
 	}
 	
 	public function create_comment()

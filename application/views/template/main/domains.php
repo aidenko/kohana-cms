@@ -7,10 +7,11 @@
 		<div class="wrapper">
 			<socket name="header" controller="template/main/block/header" />
 			<div class="left-column"></div>
-			<div class="center">
+			<div class="center domains" ng-app="domains">
 			
-				<?=isset($body) ? $body : ''?>
-				
+				<div ng-view>
+					<?=isset($body) ? $body : ''?>
+				</div>	
 				<br />
 				
 			</div>
