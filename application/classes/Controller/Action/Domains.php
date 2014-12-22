@@ -40,6 +40,11 @@ class Controller_Action_Domains extends Controller_System_Action
 		echo View::factory($this->path->view_template.'main/block/domains_list', array('lang' => $this->getLangFile()))->render();
 	}
 	
+	public function get_is_available()
+	{
+		$sDomains = '';
+	}
+	
 	public function create_comment()
 	{
 		$oComments = new Model_Comment($this->request);
