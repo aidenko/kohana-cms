@@ -43,6 +43,11 @@ class Controller_Action_Domains extends Controller_System_Action
 	public function get_is_available()
 	{
 		$sDomains = '';
+		
+		$objData = json_decode(file_get_contents("php://input"));
+		
+		var_dump($objData);
+		
 	}
 	
 	public function create_comment()

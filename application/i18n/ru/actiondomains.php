@@ -7,5 +7,6 @@ return array(
 	'sort-option-alphabetical' => 'По имени (А-Я, A-Z)',
 	'sort-option-alphabetical-reverse' => 'По имени (Я-А, Z-A)',
 	'sort-option-price' => 'По цене (дешевле - дороже)',
-	'sort-option-price-reverse' => 'По цене (дороже - дешевле)' 
+	'sort-option-price-reverse' => 'По цене (дороже - дешевле)',
+	'check-name-placeholder' => "Введите название сайта"
 );
