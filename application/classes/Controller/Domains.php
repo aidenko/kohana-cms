@@ -126,10 +126,10 @@ class Controller_Domains extends Controller_System_Component
 		$this->addStyle($this->path->css.'domains.css', 2);
 		$this->addScript('//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js', 1, 'footer');
 		$this->addScript('//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.js', 2, 'footer');
-		$this->addScript($this->path->js.'domains/domains.js', 3, 'footer');
-		//$this->addScript($this->path->js.'domains-search.js', 4);
-		$this->addScript($this->path->js.'domains/domains-list.js', 5, 'footer');
-		$this->addScript($this->path->js.'domains/domains-check.js', 6, 'footer');
+
+		$this->addScript($this->path->js.'domains/domains-list.js', 4, 'footer');
+		$this->addScript($this->path->js.'domains/checklist-model.js', 4, 'footer');
+		$this->addScript($this->path->js.'domains/domains.js', 5, 'footer');
 
 	}
 }	

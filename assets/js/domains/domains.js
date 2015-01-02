@@ -1,4 +1,4 @@
-var domains = angular.module('domains', ['ngRoute', 'domainsList', 'domainsCheck']);
+var domains = angular.module('domains', ['ngRoute', 'domainsList']);
 
 domains.config(['$routeProvider',
   function($routeProvider) {

@@ -40,14 +40,23 @@ class Controller_Action_Domains extends Controller_System_Action
 		echo View::factory($this->path->view_template.'main/block/domains_list', array('lang' => $this->getLangFile()))->render();
 	}
 	
-	public function get_is_available()
+	public function action_get_is_available()
 	{
-		$sDomains = '';
+		$aDomainsInfo = array();
 		
-		$objData = json_decode(file_get_contents("php://input"));
+		$oData = json_decode(file_get_contents("php://input"));
 		
-		var_dump($objData);
+		require Kohana::find_file('vendor', 'Phois/Whois/Whois', 'php');
+
+		foreach($oData->domains as $domain)
+		{
+			$sSiteName = $oData->name.'.'.$domain;
+			$oDomain = new Phois\Whois\Whois($sSiteName);
+			
+			$aDomainsInfo[$domain] = array('site_name' => $sSiteName, 'info' => $oDomain->isAvailable());
+		}
 		
+		return print_r(json_encode($aDomainsInfo));
 	}
 	
 	public function create_comment()

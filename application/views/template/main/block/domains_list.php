@@ -14,8 +14,8 @@
 	<br />
 	<br />
 	
-	<input type="text" name="check-name" value="" placeholder="<?=I18n::get('check-name-placeholder', $lang)?>" />
-	<input type="button" name="ee" value="check" ng-click="CheckAvailiability()" />
+	<input type="text" ng-model="check_name" value="" placeholder="<?=I18n::get('check-name-placeholder', $lang)?>" />
+	<input type="button" value="check" ng-click="checkAvailability()" />
 </div>
 
 <br /><br />
@@ -24,9 +24,11 @@
 
 		<div class="domain" ng-repeat="domain in domains | filter:query | orderBy:orderProp">
 			
-			<input type="checkbox" value="{{domain.sdo_name}}" name="domain" />
-			<span class="domain-attribute name">{{domain.sdo_name}}</span>
-			<span class="domain-attribute price">{{domain.price + " " + currency}}</span>
+			<label>
+				<input type="checkbox" checklist-value="domain.sdo_name" checklist-model="user.domains" />
+				<span class="domain-attribute name">{{domain.sdo_name}}</span>
+				<span class="domain-attribute price">{{domain.price + " " + currency}}</span>
+			</label>
 
 		</div>
 

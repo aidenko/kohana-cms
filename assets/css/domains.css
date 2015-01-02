@@ -21,13 +21,13 @@
 	display: inline-block;
 }
 
-.domains-list .domain-attribute
+.domains-list .domain:hover,
+.domains-list .domain:hover label,
+.domains-list .domain:nth-child(4n+1):hover,
+.domains-list .domain:nth-child(4n+2):hover
 {
-	display: inline-block;
-	height: 25px;
-	width: 150px;
-	line-height: 25px;
-	padding: 3px;
+	background-color: #c5e9ec;
+	cursor: pointer;
 }
 
 .domains-list .domain:nth-child(4n+1),
@@ -36,7 +36,11 @@
 	background-color: #dee2e9;
 }
 
-.domains-list .domain:hover
+.domains-list .domain-attribute
 {
-	background-color: #c5e9ec;
+	display: inline-block;
+	height: 25px;
+	width: 150px;
+	line-height: 25px;
+	padding: 3px;
 }
